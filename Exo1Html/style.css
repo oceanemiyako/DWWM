@@ -1,0 +1,19 @@
+nav {
+    background: #f43c80;
+    font-family: sans-serif;
+    border: 1px solid #CACCCD; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 33px;   
+    padding:  1 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+table{
+    text-align: center;
+}
