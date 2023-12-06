@@ -17,3 +17,29 @@ h1{
 table{
     text-align: center;
 }
+
+tr{
+    background-color: aquamarine;
+}
+
+td{
+    background-color: bisque;
+}
+
+label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+#classe{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+input{
+    background-color: aqua;
+}
