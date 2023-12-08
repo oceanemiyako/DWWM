@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    background-color: palevioletred;
+}
+
+main {
+    height: 100dvh;
+    width: 100dvw;
+
+    display: grid;
+
+    grid-template: 100px 1fr 100px / 
+    200px 1fr 200px;
+    gap: 5px;
+}
+.blue-box {
+    background-color: blue;
+}
+
+.white-box {
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    margin: 20px;
+}
+
+.red-box {
+    background-color: red;
+}
+
+#box-01 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 5;
+}
+
+#box-04 {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 5;
+}
+
+.box{
+    height: 80px;
+    width: 80px;
+    margin: 2px;
+    background-color: aqua;
+    flex-grow: 1;
+}
+
+box:nth-child(1){
+    background-color: blueviolet;
+}
