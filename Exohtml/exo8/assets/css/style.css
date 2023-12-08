@@ -47,6 +47,19 @@ main {
     flex-grow: 1;
 }
 
-box:nth-child(1){
+.box:nth-child(4n + 1){
     background-color: blueviolet;
 }
+
+.box:nth-child(4n + 2){
+    background-color: black;
+}
+
+.box:nth-child(4n + 3){
+    background-color: grey;
+}
+
+.box:nth-child(4n + 4){
+    background-color: yellow;
+}
+
