@@ -1,3 +1,7 @@
+html, body {
+    margin: 0;
+  }
+
 #mon-p {
     background-color: white;
     color: palevioletred;
@@ -9,7 +13,6 @@
 nav {
     background-color: palevioletred;
     overflow: hidden;
-    border-radius: 10px; 
 
 }
 
@@ -31,6 +34,7 @@ nav {
 
 .search-container {
     float: right;
+    border-radius: 20px 0% 0% 20px;
 }
 
 input[type=text] {
@@ -38,6 +42,8 @@ input[type=text] {
     margin-top: 8px;
     font-size: 16px;
     border: none;
+    border-radius: 20px 0% 0% 20px;
+
 }
 
 button {
@@ -46,6 +52,8 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 0% 20px 20px 0%;
+
 }
 
 button:hover {
