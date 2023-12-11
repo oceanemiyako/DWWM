@@ -13,7 +13,11 @@ html, body {
 nav {
     background-color: palevioletred;
     overflow: hidden;
-
+    height: 75%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-link {
@@ -35,6 +39,7 @@ nav {
 .search-container {
     float: right;
     border-radius: 20px 0% 0% 20px;
+    flex: content;
 }
 
 input[type=text] {
