@@ -1,22 +1,23 @@
 body, html {
     margin: 0;
 }
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
 }
 
 main {
-    height: 100dvh;
-    width: 100dvw;
-
+    max-height: calc(100% - 60px);
+    width: 100vw;
     display: grid;
-    
-    grid-template: 1fr 3fr 3fr 1fr / 
-                   100px 1fr 100px;
+    grid-template:1fr / repeat(3, 1fr);
     gap: 10px;
+    margin-top: 60px; 
+    margin-bottom: 60px;
 }
 
 .flex-center {
@@ -89,33 +90,48 @@ nav > form > button:hover {
 .square {
     width: 300px;
     height: 300px;
-    margin: 10px;
     overflow: hidden;
-    background-color: black;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .square-img {
     width: 250px;
     height: 250px;
-    background-image: url(http://random.imagecdn.app/501/501);
+    background-image: url("http://random.imagecdn.app/501/501");
+    background-color: grey; 
+    background-size: cover;
+    border-radius: 15px;
 }
 
+.square::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(163, 10, 145, 0.147);
+    z-index: 1;
+    transition: height 0.5s ease-in-out;
+}
 
+.square:hover::before {
+    height: 50%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.square:hover .text-overlay {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    z-index: 2; 
+    transform: translateY(100%);
+    animation: slideUp 0.5s ease-in-out; 
+}
 
 
 
@@ -123,4 +139,10 @@ nav > form > button:hover {
 footer{
     background-color: palevioletred;
     text-align: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
