@@ -1,0 +1,53 @@
+#mon-p {
+    background-color: white;
+    color: palevioletred;
+    position: sticky;
+    top: 0;
+}
+
+
+nav {
+    background-color: palevioletred;
+    overflow: hidden;
+    border-radius: 10px; 
+
+}
+
+.nav-link {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px; 
+    transition: color 0.3s ease; 
+}
+
+.nav-link:hover {
+    background-color: red;
+    color: black; 
+}
+
+.search-container {
+    float: right;
+}
+
+input[type=text] {
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 16px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: green;
+}
