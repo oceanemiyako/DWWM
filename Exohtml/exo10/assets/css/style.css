@@ -99,10 +99,9 @@ nav > form > button:hover {
 .square-img {
     width: 250px;
     height: 250px;
-    background-image: url("http://random.imagecdn.app/501/501");
-    background-color: grey; 
     background-size: cover;
     border-radius: 15px;
+    align-items: center;
 }
 
 .square::before {
