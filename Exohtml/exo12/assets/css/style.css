@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue-box {
+    background-color: blue;
+}
+
+.green-box {
+    background-color: green;
+}
+
+.red-box {
+    background-color: red;
+}
+
+.white-circle {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 50%;
+}
+
+.mobile{
+grid-template-rows: repeat(12, 1fr) / 1fr;
+}
