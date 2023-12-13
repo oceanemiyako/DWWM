@@ -18,7 +18,7 @@ main {
 }
 
 .square {
-    border: 1px solid white;
+    border: 5px solid white;
     height: 400px;
     width: 400px;
     padding: 2%;
@@ -40,3 +40,29 @@ main {
     filter: grayscale(0%);
 }
 
+@media screen and (min-width: 426px) {
+    body {
+        grid-template: repeat(5, 1fr) / 1fr;
+
+    }
+
+    .square {
+        border: 5px solid white;
+        height: 200px;
+        width: 500px;
+        padding: 2%;
+        box-sizing: border-box;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        }
+    
+    .square-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: filter 400ms ease;
+        }
+
+}
