@@ -4,8 +4,8 @@ html, body {
 
 main {
     display: grid;
-    height: 100dvh;
-    width: 100dvw;
+    height: 100vh;
+    width: 100vw;
     gap: 5px;
 }
 
@@ -32,37 +32,38 @@ main {
     width: 40px;
     background-color: white;
     border-radius: 50%;
-    opacity: 50%;
+    opacity: 0.5;
 }
 
-.mobile{
-grid-template-rows: repeat(12, 1fr) / 1fr;
+.mobile {
+    grid-template-rows: repeat(12, 1fr);
 }
 
-.desktop{
-    grid-template: 20px 50px 50px 20px
-                    20px 50px 50px 20px;
+.desktop {
+    grid-template: 
+        20px 50px 50px 20px
+        20px 50px 50px 20px;
 }
 
-.tablet{
-    grid-template: 1fr 1fr 1fr
-        50px 50px 50px 50px; 
+.tablet {
+    grid-template: 
+        1fr 1fr 1fr
+        1fr 1fr 1fr
+        50px 50px 50px 50px;
 }
 
 @media screen and (min-width: 769px) {
-    body {
-        grid-template: 20px 50px 50px 20px
-        20px 50px 50px 20px;    
+    body.desktop {
+        grid-template: 
+            20px 50px 50px 20px
+            20px 50px 50px 20px;    
     }
-
 }
 
-@media  screen and (min-width: 1441) { 
-    
-    body { 
-        grid-template: 1fr 1fr 1fr
-        50px 50px 50px 50px;  
-
-}
-
+@media screen and (min-width: 1441px) {
+    body.tablet {
+        grid-template: 
+            1fr 1fr 1fr
+            50px 50px 50px 50px;  
+    }
 }
