@@ -18,3 +18,4 @@ console.log(estPalindrome("touot"));
 console.log(estPalindrome("1234321"));     
 console.log(estPalindrome("Pokemon"));      
 console.log(estPalindrome("palindrome"));  
+console.log(estPalindrome("Noël"))
