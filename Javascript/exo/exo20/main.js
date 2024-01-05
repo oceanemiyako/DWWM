@@ -45,3 +45,4 @@ if (verificationAdn(sequenceSaisie)) {
 } else {
     console.log("La séquence d'ADN saisie n'est pas valide.");
 }
+
