@@ -31,7 +31,7 @@ function saisirNoteNegatif() {
     return note;
 }
 
-function saisieJusquANegative() {
+function saisieJusteANegative() {
     let notes = [];
 
     alert("Début de Saisie !");
@@ -83,7 +83,7 @@ function menu() {
             saisieFixe();
             break;
         case 2:
-            saisieJusquANegative();
+            saisieJusteANegative();
             break;
         default:
             alert("Choix invalide. Veuillez choisir 1 ou 2.");
@@ -91,3 +91,4 @@ function menu() {
 }
 
 menu();
+
