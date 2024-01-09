@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/main.js"></script>
+</head>
+<body>
+
+<h1>Calcul d'indemnité</h1>
+
+<form id="indemniteForm">
+    <label for="age">Âge :</label>
+    <input type="number" id="age" required>
+
+    <label for="anciennete">Ancienneté en années :</label>
+    <input type="number" id="anciennete" required>
+
+    <label for="dernierSalaire">Dernier salaire :</label>
+    <input type="number" id="dernierSalaire" required>
+
+    <button type="button" onclick="calculerIndemnite()">Calculer l'indemnité</button>
+</form>
+
+<div id="resultat"></div>
+
+
+</body>
+</html>
