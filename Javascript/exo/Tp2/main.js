@@ -55,6 +55,13 @@ function checkGuess() {
     updateAttemptsCount();
 }
 
+document.addEventListener("keydown", (event) => {
+    console.log(event.key);
+    if(event.key == "Enter") {
+        checkGuess();
+    }
+})
+
 function updateAttemptsCount() {
     const attemptsCountElement = document.getElementById('attempts-count');
     const attemptsLabelElement = document.getElementById('attempts-label');
