@@ -23,6 +23,7 @@ let attempts = 0;
 function startGame() {
     secretNumber = Math.floor(Math.random() * 50) + 1;
     attempts = 0;
+    updateAttemptsCount();
     document.getElementById('result').innerText = '';
     document.getElementById('play-button').disabled = false;
 }
@@ -35,7 +36,7 @@ function checkGuess() {
         errorMessageElement.innerText = "Veuillez entrer un nombre valide entre 1 et 50.";
         return;
     } else {
-        errorMessageElement.innerText = ''; 
+        errorMessageElement.innerText = '';
     }
 
     attempts++;
@@ -48,5 +49,13 @@ function checkGuess() {
     } else {
         document.getElementById('result').innerText = "Le nombre mystère est plus petit.";
     }
+
+    updateAttemptsCount();
 }
+
+function updateAttemptsCount() {
+    document.getElementById('attempts-count').innerText = attempts;
+}
+
+
 

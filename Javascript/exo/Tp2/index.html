@@ -16,16 +16,16 @@
         <p class="info">Essayez de le deviner en proposant ci-dessous :</p>
         <div>
             <form action="#">
-            <input type="number" id="user-input" placeholder="Votre proposition">
-            <button onclick="checkGuess()">Valider</button>
+                <input type="number" id="user-input" placeholder="Votre proposition">
+                <button type="button" onclick="checkGuess()">Valider</button>
             </form>
-
-            <p id="attempts-info" class="info"></p>
+            <p id="attempts-info" class="info">Tentatives: <span id="attempts-count">0</span></p>
             <p id="error-message" class="error-message"></p>
         </div>
         <button id="play-button" onclick="startGame()">Rejouer</button>
         <p id="result"></p>
     </div>
+
     
     
 
