@@ -26,6 +26,8 @@ function startGame() {
     updateAttemptsCount();
     document.getElementById('result').innerText = '';
     document.getElementById('play-button').disabled = false;
+    document.getElementById('user-input').value = '';
+    document.getElementById('error-message').innerText = '';
 }
 
 function checkGuess() {
@@ -54,8 +56,30 @@ function checkGuess() {
 }
 
 function updateAttemptsCount() {
-    document.getElementById('attempts-count').innerText = attempts;
+    const attemptsCountElement = document.getElementById('attempts-count');
+    const attemptsLabelElement = document.getElementById('attempts-label');
+    const attemptsInfoElement = document.getElementById('result');
+    const lastGuess = parseInt(document.getElementById('user-input').value);
+
+    attemptsCountElement.innerText = attempts;
+
+    if (attempts === 0) {
+        attemptsInfoElement.innerText = "Aucune tentative pour l'instant.";
+    } else {
+        if (lastGuess < secretNumber) {
+            attemptsInfoElement.innerText = `Le nombre mystère est plus grand que ${lastGuess}.`;
+        } else if (lastGuess > secretNumber) {
+            attemptsInfoElement.innerText = `Le nombre mystère est plus petit que ${lastGuess}.`;
+        } else {
+            attemptsInfoElement.innerText = `Bravo ! Vous avez trouvé le nombre mystère en ${attempts} tentatives.`;
+        }
+    }
+
 }
+
+
+
+
 
 
 

@@ -12,27 +12,19 @@
     
     <div id="game-container">
         <h1 id="secret-number" class="title">Le nombre mystère</h1>
-        <p class="info">J'ai généré un nombre entre 1 et 50 inclus.</p>
-        <p class="info">Essayez de le deviner en proposant ci-dessous :</p>
+        <p id="result" class="info">J'ai généré un nombre entre 1 et 50</p>
+        <p class="info" id="instruction">Essayez de le deviner en proposant ci-dessous :</p>
         <div>
             <form action="#">
-                <input type="number" id="user-input" placeholder="Votre proposition">
+                <span id="attempts-label">Nombre de coups :</span>
+                <span id="attempts-count">0</span>
+                <input type="number" id="user-input" placeholder="Votre proposition">                
                 <button type="button" onclick="checkGuess()">Valider</button>
             </form>
-            <p id="attempts-info" class="info">Tentatives: <span id="attempts-count">0</span></p>
             <p id="error-message" class="error-message"></p>
         </div>
         <button id="play-button" onclick="startGame()">Rejouer</button>
-        <p id="result"></p>
     </div>
-
-    
-    
-
-
-
-
-
 
 </body>
 </html>
