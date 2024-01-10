@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2 Nombre mystère</title>
+    <script src="/main.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div id="game-container">
+        <h1 id="secret-number" class="title">Le nombre mystère</h1>
+        <p class="info">J'ai généré un nombre entre 1 et 50 inclus.</p>
+        <p class="info">Essayez de le deviner en proposant ci-dessous :</p>
+        <div>
+            <form action="#">
+            <input type="number" id="user-input" placeholder="Votre proposition">
+            <button onclick="checkGuess()">Valider</button>
+            </form>
+
+            <p id="attempts-info" class="info"></p>
+            <p id="error-message" class="error-message"></p>
+        </div>
+        <button id="play-button" onclick="startGame()">Rejouer</button>
+        <p id="result"></p>
+    </div>
+    
+    
+
+
+
+
+
+
+</body>
+</html>
