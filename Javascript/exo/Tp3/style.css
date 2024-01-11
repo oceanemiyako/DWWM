@@ -61,13 +61,13 @@ button:active {
     transform: translateY(2px);
 }
 
-button[data-key="8"] {
+button[data-key="C"] {
     background-color: orangered;
     font-weight: bold;
     color: white;
 }
 
-button[data-key="13"] {
+button[data-key="="] {
     grid-column: span 2;
     background-color: gray;
     font-weight: bold;
