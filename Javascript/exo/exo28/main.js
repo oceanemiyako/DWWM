@@ -40,12 +40,12 @@ const livre = {
 
 console.log("Titre du livre :", livre.titre);
 
-console.log("État du livre :", livre.estDisponible);
+console.log("État du livre :", livre.estDisponible ? "Disponible" : "Non disponible");
 
 livre.emprunter();
 
-console.log("État du livre après l'emprunt :", livre.estDisponible);
+console.log("État du livre après l'emprunt :", livre.estDisponible ? "Disponible" : "Non disponible");
 
 livre.retourner();
 
-console.log("État du livre après le retour :", livre.estDisponible);
+console.log("État du livre après le retour :", livre.estDisponible ? "Disponible" : "Non disponible");
