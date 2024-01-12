@@ -13,16 +13,10 @@ import { Moto } from "./classes/Moto.js";
 const car = new Voiture("Toyota", "Camry", 2022, 4);
 const bike = new Moto("Honda", "CBR500R", 2021, "Sport");
 
-function displayInHTML(content) {
-    const paragraph = document.createElement("p");
-    paragraph.textContent = content;
-    document.body.appendChild(paragraph);
-}
+
 
 console.log(car.display());
 console.log(bike.display());
 
-document.addEventListener("DOMContentLoaded", function() {
-    displayInHTML(car.display());
-    displayInHTML(bike.display());
-});
+document.body.innerHTML += `<p>${car.display()}</p>`;
+document.body.innerHTML += `<p>${bike.display()}</p>`;
