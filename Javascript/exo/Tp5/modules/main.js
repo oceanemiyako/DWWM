@@ -13,8 +13,6 @@ import { Moto } from "./classes/Moto.js";
 const car = new Voiture("Toyota", "Camry", 2022, 4);
 const bike = new Moto("Honda", "CBR500R", 2021, "Sport");
 
-
-
 console.log(car.display());
 console.log(bike.display());
 
