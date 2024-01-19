@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; 
+}
+
+.container {
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(202, 71, 71); 
+}
+
+.screen {
+    border: 2px solid gray;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f0f0f0; 
+
+.image {
+    text-align: center;
+}
+
+}
