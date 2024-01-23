@@ -45,7 +45,7 @@ if (isFormValid.value) {
 }
 
 .error-message {
-    color: #ff0000;
+    color: red;
     font-weight: bold;
 }
 </style>
