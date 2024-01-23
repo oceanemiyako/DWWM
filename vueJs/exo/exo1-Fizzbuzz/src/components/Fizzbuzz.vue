@@ -36,11 +36,11 @@ const decrement = () => {
 
 </template>
 
-<script scoped>
+<style scoped>
 
-// button {
-//         background-color: rgb(144, 17, 17);
-//     }
-    
+  button {
+        background-color: rgb(144, 17, 17);
+    }
+     
 
-</script>
+</style>
