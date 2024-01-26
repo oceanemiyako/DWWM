@@ -63,30 +63,59 @@ const closeModal = () => {
 
 <template>
     <div>
-        <h2>Liste des Mangas à regarder</h2>
-        <ul>
-            <li v-for="manga in mangaList" :key="manga.id">
-                <img :src="`https://source.unsplash.com/random/50x50?${manga.title.split(' ').join('').toLowerCase()}`" alt="" style="width: 50px; height: 50px;">
-                <span>{{ manga.title }} - {{ manga.genre }} - {{ manga.author }} - {{ manga.rating }}</span>
-                <span v-if="manga.censored"> + 16</span>
-                <button @click="editManga(manga)">Modifier</button>
-                <button @click="deleteManga(manga.id)">Supprimer</button>
-            </li>
-        </ul>
-        <button @click="openAddModal">Ajouter un Manga</button>
+        <header></header>
+    <h2>Liste des Mangas à regarder</h2>
+    <ul class="manga-list">
+    <li v-for="manga in mangaList" :key="manga.id" class="manga-item">
+        <img
+        :src="`https://source.unsplash.com/random/50x50?${manga.title.split(' ').join('').toLowerCase()}`"
+        alt=""
+        class="manga-image"
+        />
+        <div class="manga-info">
+        <span>{{ manga.title }} - {{ manga.genre }} - {{ manga.author }} - {{ manga.rating }}</span>
+        <span v-if="manga.censored"> + 16</span>
+        </div>
+        <div class="manga-buttons">
+        <button @click="editManga(manga)">Modifier</button>
+        <button @click="deleteManga(manga.id)">Supprimer</button>
+        </div>
+    </li>
+    </ul>
+    <button @click="openAddModal">Ajouter un Manga</button>
 
-        <MangaListModal v-if="showAddModal" @save="addManga" @close="closeModal" />
-        <MangaListModal v-if="showEditModal" :manga="selectedManga" @save="updateManga" @close="closeModal" />
-    </div>
+    <MangaListModal v-if="showAddModal" @save="addManga" @close="closeModal" />
+    <MangaListModal v-if="showEditModal" :manga="selectedManga" @save="updateManga" @close="closeModal" />
+</div>
 </template>
 
 <style scoped>
 
-/* .img {
+.manga-list {
+list-style-type: none;
+padding: 0;
+}
 
+.manga-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+
+.manga-image {
+width: 50px;
 height: 50px;
-width: 50px; 
+margin-right: 10px;
+}
 
-} */
+.manga-info {
+flex-grow: 1;
+}
+
+.manga-buttons button {
+margin-left: 5px;
+}
+
 
 </style>

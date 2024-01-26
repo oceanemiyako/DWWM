@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, defineEmits, ref, reactive, computed } from 'vue';
+import {  ref, reactive, computed } from 'vue';
 
 const props = defineProps(['manga']);
 const emits = defineEmits(['save', 'close']);
@@ -16,6 +16,13 @@ const saveManga = () => {
 const closeModal = () => {
     emits('close');
 };
+
+const modalBgClickHandler = (event) => {
+    if (event.target.classList.contains('modal-bg')) {
+        closeModal();
+    }
+};
+
 </script>
 
 <template>
@@ -58,11 +65,14 @@ const closeModal = () => {
                 </div>
 
                 <div>
-                    <input v-model="manga.censored" type="checkbox" id="censure" name="censure" value="Bike">
+                    <input v-model="manga.censored" type="checkbox" id="censure" name="censure" value="censure">
                     <label for="censure"> + 16</label><br>
                 </div>
 
+                <div>
                 <button type="submit">{{ isEditMode ? 'Modifier' : 'Ajouter' }}</button>
+                </div>
+
             </form>
         </div>
     </div>
