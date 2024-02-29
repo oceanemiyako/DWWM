@@ -4,10 +4,9 @@ const livreController = require('../src/controllers/livreController');
 
 
 router.get('/', livreController.getAllLivres);
-// router.get('/:id', livreController.getLivreById);
-// router.post('/', livreController.createLivre);
-// router.put('/:id', livreController.updateLivre);
-// router.delete('/:id', livreController.deleteLivre);
+router.post('/add-livres', livreController.addLivre);
+router.put('/update/:id', livreController.updateLivre);
+router.delete('/delete/:id', livreController.deleteLivre);
 
 module.exports = router;
 
